@@ -2,16 +2,16 @@ require 'net/http'
 
 def banner
   banner_text = <<-'BANNER'
-____ _  _ ___  ____ _  _ _  _ _  _ 
+\033[36m____ _  _ ___  ____ _  _ _  _ _  _ 
 [__  |  | |__] |___ |\ | |  | |\/|     Written by Bunjo.
-___] |__| |__] |___ | \| |__| |  |     Github: https://github.com/thebunjo
+___] |__| |__] |___ | \| |__| |  |     Github: https://github.com/thebunjo\033[0m
                                
   BANNER
 end
 
-puts banner.cyan
+puts banner
 
-print "Enter target (ex: google.com): ".magenta
+print "\033[35mEnter target (ex: google.com): \033[0m"
 $domain = gets.chomp.to_s
 
 $file_path = "subdomains.txt"
@@ -26,7 +26,7 @@ def find(subdomain)
   rescue Exception
     # Ignored
   else
-    puts "[+] Discovered subdomain: #{url}".green
+    puts "[+] Discovered subdomain: #{url}\033[32m"
   end
 end
 
