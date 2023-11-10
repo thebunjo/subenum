@@ -2,9 +2,9 @@ require 'net/http'
 
 def banner
   banner_text = <<-'BANNER'
-\033[36m____ _  _ ___  ____ _  _ _  _ _  _ 
+____ _  _ ___  ____ _  _ _  _ _  _ 
 [__  |  | |__] |___ |\ | |  | |\/|     Written by Bunjo.
-___] |__| |__] |___ | \| |__| |  |     Github: https://github.com/thebunjo\033[0m
+___] |__| |__] |___ | \| |__| |  |     Github: https://github.com/thebunjo
                                
   BANNER
 end
