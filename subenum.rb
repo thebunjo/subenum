@@ -24,7 +24,7 @@ def find(subdomain)
   begin
     response = Net::HTTP.get_response(URI(url))
   rescue Exception
-    # Ignored
+
   else
     puts "[+] Discovered subdomain: #{url}\033[32m"
   end
